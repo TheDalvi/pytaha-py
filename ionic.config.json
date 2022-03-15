@@ -1,0 +1,8 @@
+{
+  "name": "PytahaPY",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bc259887"
+}
