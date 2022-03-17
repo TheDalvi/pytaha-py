@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   }
 
 ];
