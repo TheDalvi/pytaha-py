@@ -12,10 +12,11 @@
   <ion-col size="1"></ion-col>
 
    <ion-col size="10" >
-    <ion-item class="colorlogin">
-      <ion-label  position="floating">Username</ion-label>
-      <ion-input class="inputG" type="email" color="light" > </ion-input>
+    <ion-item class="colorlogin inputG">
+      <ion-label color="light"  position="floating">Username</ion-label>
+      <ion-input  type="email"  > </ion-input>
     </ion-item>
+
    </ion-col>
   <ion-col size="1"></ion-col>
 
@@ -25,8 +26,8 @@
   <ion-col size="1"></ion-col>
 
   <ion-col size="10">
-   <ion-item class="colorlogin">
-     <ion-label position="floating">Password</ion-label>
+   <ion-item class="colorlogin inputG">
+     <ion-label color="light" position="floating">Password</ion-label>
      <ion-input class="inputG colorlogin" type="password"> </ion-input>
    </ion-item>
   </ion-col>
@@ -34,8 +35,6 @@
   <ion-col size="1"></ion-col>
 
 </ion-row>
-
-
 
 
 <ion-row >
@@ -74,15 +73,16 @@
   
  
   <ion-col size="10">
-    <ion-text color="secondary">
-      <h1>Recuperar contraseña</h1>
-    </ion-text>
+   <ion-label [routerLink]="['/recuperar']" >
+     <ion-text
+     expand="block" shape="round"
+     >¿Desea recuperar la contraseña?</ion-text>
+ </ion-label>
   </ion-col>
  
   <ion-col  size="1"></ion-col>
  
  </ion-row>
-
 </ion-content>
 
 
