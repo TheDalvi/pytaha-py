@@ -3,6 +3,21 @@
     margin: auto;
 }
 .colorlogin{
-    color: #3880ff;
+    color: #141414;
     
+}
+
+.centrado{
+    text-align: center;
+  }
+
+
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputG {
+    border-radius: 50px;
 }
