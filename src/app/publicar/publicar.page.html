@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PUBLICAR ALQUILER</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+   <!-- List of Text Items -->
+  <ion-list >
+    <ion-item>
+      <ion-label color="light">CASAS INDEPENDIENTES</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="light">PIEZAS</ion-label>
+    </ion-item>
+
+    
+
+    <ion-item>
+      <ion-label color="light">DEPARTAMENTOS</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="light">OTROS</ion-label>
+    </ion-item>
+  </ion-list>
+   
+
+
+   <ion-grid>
+     <ion-row>
+   
+       <ion-col size="12">
+        <ion-button (click)="onClick()" expand="block" shape="round">
+          <ion-icon name="add-outline"></ion-icon>
+          CREA UN NUEVO ANUNCIO
+        </ion-button>
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+      <ion-col size="12">
+       <ion-button (click)="onClick()" expand="block"  shape="round">
+        <ion-icon name="copy-outline"></ion-icon>
+         DUPLICAR UN ANUNCIO EXISTENTE
+       </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+   </ion-grid>
+   <ion-item>
+    <ion-card>
+      <img src="https://www.cronista.com/files/image/308/308160/5ffe310c39ead.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Destino Ideal</ion-card-subtitle>
+        <ion-card-title>Casa Independiente</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Esta es una casa encantadora de estilo clasico especial para los dias de verano y las vacaciones de invierno. Ideal para pasarla con la familia o amigos.
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  
+  
+
+
+
+
+
+</ion-content>

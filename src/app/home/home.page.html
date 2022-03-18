@@ -4,41 +4,13 @@
   <ion-searchbar color="light" placeholder="¿A dónde vas?"></ion-searchbar>
  
 
-
   
-
-   <!-- fab placed to the (vertical) center and start -->
-   <ion-fab vertical="center" horizontal="start" slot="fixed">
-    <ion-fab-button color="light"> 
-      <ion-icon  name="play-outline">
-      </ion-icon>
-      <ion-label>slide</ion-label>
-    </ion-fab-button>
-  </ion-fab>
+      <ion-img class= "logoprincipal2" src ="assets\icon\homeicon.PNG"></ion-img>
 
 
 
 
-
-
-
-
-
-
-
-
-
-  
-
-  <ion-grid >
-    <ion-row>
-      <ion-img class= "logoprincipal2" src ="assets\icon\homeicon.png"></ion-img>
-    </ion-row>
-  </ion-grid>
-
-
-
-  
+</ion-content>
 <!-- Scrollable Segment -->
 <ion-segment scrollable value="heart">
   <ion-segment-button value="home">
@@ -65,12 +37,6 @@
 </ion-segment>
   
 
-
-
-
-
-</ion-content>
-
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
     <ion-toolbar color="primary">
@@ -94,19 +60,21 @@
   <ion-header>
     <ion-toolbar color="tertiary">
       <ion-title>Menú</ion-title>
+     
     </ion-toolbar>
   </ion-header>
   <ion-content >
     <ion-list  >
-      <ion-item color="light">
-        <ion-icon  name="people-outline"></ion-icon>
+      <ion-item [routerLink]="['/userconfig']" expand="block" color="light">
+        <ion-icon    name="people-outline"></ion-icon>
         
         Perfil
       </ion-item >
-      <ion-item color= "light">
-        <ion-icon name="search-circle-outline"></ion-icon>
+      <ion-item  [routerLink]="['/explorar']" expand="block"  color= "light">
+        <ion-icon name="search-circle-outline"  shape="round"></ion-icon>
         <!-- <ion-img  class= "logoprincipal" src ="assets\icon\exploraicon.png"></ion-img> -->
         Explorar
+       
       </ion-item>
       <ion-item  color= "light" >
         <ion-icon name="heart-outline"></ion-icon>
@@ -129,10 +97,17 @@
   <ion-grid >
     <ion-row>
       <ion-img class= "logoprincipal2" src ="assets\icon\slideicon.png"></ion-img>
+      
+      
     </ion-row>
+    
   </ion-grid>
-
+  <div class="ion-text-center">
+    <h3>Versión 0.0.1</h3>
+  
+  </div>
 </ion-menu>
+
 
 
 
@@ -145,17 +120,17 @@
 
 <ion-menu side="end" type="push" contentId="main">
   <ion-header>
-    <ion-toolbar color="danger">
-      <ion-title>End Menu</ion-title>
+    <ion-toolbar color="tertiary">
+      <ion-title>Modo Anfitrión</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item color="light">Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
+      
+      <ion-item color="light"> Publica tu Espacio</ion-item>
+      <ion-item color="light">Más informaciín sobre cómo hospedar</ion-item>
+      <ion-item color="light">Asistencia</ion-item>
+      <ion-item color="light">Terminos de Servicios</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>

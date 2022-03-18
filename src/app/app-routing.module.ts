@@ -20,6 +20,26 @@ const routes: Routes = [
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+  {
+    path: 'userconfig',
+    loadChildren: () => import('./userconfig/userconfig.module').then( m => m.UserconfigPageModule)
+  },
+  {
+    path: 'explorar',
+    loadChildren: () => import('./explorar/explorar.module').then( m => m.ExplorarPageModule)
+  },
+  {
+    path: 'alquileres',
+    loadChildren: () => import('./alquileres/alquileres.module').then( m => m.AlquileresPageModule)
+  },
+  {
+    path: 'reservar',
+    loadChildren: () => import('./reservar/reservar.module').then( m => m.ReservarPageModule)
+  },
+  {
+    path: 'publicar',
+    loadChildren: () => import('./publicar/publicar.module').then( m => m.PublicarPageModule)
   }
 
 ];
