@@ -1,9 +1,185 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-dgfd
+
+  <ion-searchbar color="light" placeholder="¿A dónde vas?"></ion-searchbar>
+ 
+
+
+  
+
+   <!-- fab placed to the (vertical) center and start -->
+   <ion-fab vertical="center" horizontal="start" slot="fixed">
+    <ion-fab-button color="light"> 
+      <ion-icon  name="play-outline">
+      </ion-icon>
+      <ion-label>slide</ion-label>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <ion-grid >
+    <ion-row>
+      <ion-img class= "logoprincipal2" src ="assets\icon\homeicon.png"></ion-img>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+  
+<!-- Scrollable Segment -->
+<ion-segment scrollable value="heart">
+  <ion-segment-button value="home">
+    <ion-icon name="home"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="heart">
+    <ion-icon name="heart"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="pin">
+    <ion-icon name="pin"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="star">
+    <ion-icon name="star"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="call">
+    <ion-icon name="call"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="globe">
+    <ion-icon name="globe"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="basket">
+    <ion-icon name="basket"></ion-icon>
+  </ion-segment-button>
+</ion-segment>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ion-content>
+
+
+
+
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item color="light">aaa</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu"  >
+ 
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list  >
+      <ion-item color="light">
+        <ion-icon  name="people-outline"></ion-icon>
+        
+        Perfil
+      </ion-item >
+      <ion-item color= "light">
+        <ion-icon name="search-circle-outline"></ion-icon>
+        <!-- <ion-img  class= "logoprincipal" src ="assets\icon\exploraicon.png"></ion-img> -->
+        Explorar
+      </ion-item>
+      <ion-item  color= "light" >
+        <ion-icon name="heart-outline"></ion-icon>
+        <!-- <ion-img   class= "logoprincipal" src ="assets\icon\favoritoicon.png"></ion-img> -->
+        Favoritos
+      </ion-item>
+      <ion-item color= "light" >
+        <ion-icon name="chatbox-outline"></ion-icon>
+        
+        Mensajes
+      </ion-item>
+      <ion-item color= "light">
+        <ion-icon name="settings-outline"></ion-icon>
+        <!-- <ion-img class= "logoprincipal" src ="assets\icon\configuraricon.png"></ion-img> -->
+        Configurar
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+
+
+
+
+
+
+
+<ion-menu side="end" type="push" contentId="main">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>End Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item color="light">Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+

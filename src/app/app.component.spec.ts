@@ -20,4 +20,9 @@ describe('AppComponent', () => {
   });
   // TODO: add more tests!
 
+  //agregue esto para el menu
+  interface MenuCustomEvent<T = any> extends CustomEvent {
+    detail: T;
+    target: HTMLIonMenuElement;
+  }
 });
