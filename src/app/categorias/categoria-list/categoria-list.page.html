@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>categoriaList</ion-title>
+  </ion-toolbar>
+  <ion-button style="border-radius:60px ;" (click)="onClickE()" >+</ion-button>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of lista" >
+    <ion-item >
+      <ion-label class="label">
+        {{item.Descripcion}}
+      </ion-label>
+      <ion-label class="label">
+        {{item.Id}}
+      </ion-label>
+      <ion-button (click)="onClickE(item.Id)" >Delete</ion-button>
+      <ion-button  [routerLink]= "['/categorias',item.Id]" >Edit</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

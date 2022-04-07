@@ -1,0 +1,14 @@
+
+<ion-content>
+ <form [formGroup]="frmCategoria" (ngSubmit)="clickButton()">
+ <ion-input  formControlName="Descripcion" name="Descripcion" type ="text" placeholder="categoria"></ion-input >
+  <ion-input  formControlName="Id" name="Id" type ="text" placeholder="Id"></ion-input >
+
+<ion-button  type="submit">
+  INSERTAR CATEGORIA
+</ion-button>
+
+
+
+ </form>
+</ion-content>

@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -40,6 +41,14 @@ const routes: Routes = [
   {
     path: 'publicar',
     loadChildren: () => import('./publicar/publicar.module').then( m => m.PublicarPageModule)
+  },
+  {
+    path: 'categorias/:id',
+    loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
+  },
+  {
+    path: 'categoria-list',
+    loadChildren: () => import('./categorias/categoria-list/categoria-list.module').then( m => m.CategoriaListPageModule)
   }
 
 ];
