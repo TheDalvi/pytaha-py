@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-categorias',
@@ -14,7 +15,7 @@ export class CategoriasPage implements OnInit {
  
   item="0";
   
-  constructor( private http : HttpClient,public formBuilder: FormBuilder,private activate:ActivatedRoute)
+  constructor( private http : HttpClient,public formBuilder: FormBuilder,private activate:ActivatedRoute,private router: NavController)
   {
 
 
@@ -40,7 +41,7 @@ export class CategoriasPage implements OnInit {
 
 editar(){
   console.log(this.frmCategoria.value);
-this.http.put('http://localhost:3000/categoria/update',this.frmCategoria.value).subscribe(respuesta=>{
+  this.http.put('http://localhost:3000/categoria/update',this.frmCategoria.value).subscribe(respuesta=>{
   console.log("respuesta", respuesta);
 })
 
@@ -53,9 +54,11 @@ clickButton(){
     this.registrar();
   }
   else{
-    this.editar()
+    this.editar();
+   
     //router link volver al listado
   }
+  this.router.navigateForward(["categoria-list"])
 }
 CargarDatosDFoumulario(dato){
   this.frmCategoria=this.formBuilder.group({
@@ -70,7 +73,7 @@ CargarDatosDFoumulario(dato){
     console.log(this.item)
 
       this.frmCategoria=this.formBuilder.group({
-        Id: "",
+        Id: 0,
         Descripcion: [''],
        });
       
@@ -79,5 +82,8 @@ CargarDatosDFoumulario(dato){
       this.getById();
     }
   }
-
+onClickBack()
+{
+this.router.pop();
+}
 }

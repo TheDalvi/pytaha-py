@@ -7,23 +7,118 @@
 <ion-content>
  
    <!-- List of Text Items -->
-  <ion-list >
-    <ion-item>
-      <ion-label color="light">CASAS INDEPENDIENTES</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label color="light">PIEZAS</ion-label>
-    </ion-item>
-
-    
-
-    <ion-item>
-      <ion-label color="light">DEPARTAMENTOS</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label color="light">OTROS</ion-label>
-    </ion-item>
-  </ion-list>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Cantidad de Habitaciones</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Permiten Mascotas</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Descripcion del lugar</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Ubicación GPS</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Observación</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Direción</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Precio</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating"> Garantia</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+  
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Referencia</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
+  
+   <ion-row>
+    <ion-col size="1"></ion-col>
+  
+     <ion-col size="10" >
+      <ion-item class="colorlogin inputG">
+        <ion-label color="light" position="floating">Categoria</ion-label>
+        <ion-input class="inputG" type="email"  > </ion-input>
+      </ion-item>
+     </ion-col>
+    <ion-col size="1"></ion-col>
+   </ion-row>
    
 
 
@@ -46,7 +141,16 @@
        </ion-button>
       </ion-col>
     </ion-row>
-
+    
+    <ion-row>
+      <ion-col size="12">
+       <ion-button  [routerLink]="['/categoria-list']" (click)="onClick()" expand="block"  shape="round">
+        <ion-icon   name="add-outline"></ion-icon>
+         AGREGAR CATEGORIA
+        
+       </ion-button>
+      </ion-col>
+    </ion-row>
 
    </ion-grid>
    <ion-item>
