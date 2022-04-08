@@ -130,7 +130,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Categoria</ion-label>
-        <ion-input class="text" type="numeric"  > </ion-input>
+        <ion-input formControlName="CategoriaId" class="text" type="numeric"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -138,9 +138,9 @@
    <ion-row>
    
     <ion-col size="12">
-     <ion-button type="submit" expand="block" shape="round">
-       <ion-icon name="add-outline"></ion-icon>
-       CREA UN NUEVO ANUNCIO
+     <ion-button [routerLink]="['/publicar-list']"  type="submit" expand="block" shape="round">
+       <ion-icon name="home-outline"></ion-icon>
+       CREA UNA PUBLICACION
      </ion-button>
     </ion-col>
   </ion-row>
@@ -151,9 +151,9 @@
 
      <ion-row>
       <ion-col size="12">
-       <ion-button (click)="onClick()" expand="block"  shape="round">
-        <ion-icon name="copy-outline"></ion-icon>
-         DUPLICAR UN ANUNCIO EXISTENTE
+       <ion-button [routerLink]="['/rol-list']" (click)="onClick()" expand="block"  shape="round">
+        <ion-icon name="accessibility-outline"></ion-icon>
+         AGREGAR ROLES
        </ion-button>
       </ion-col>
     </ion-row>

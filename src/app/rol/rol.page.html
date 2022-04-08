@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button (click)="onClickBack()"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Rol</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <form [formGroup]="frmRol" (ngSubmit)="clickButton()">
+ <ion-input  formControlName="Descripcion" name="Descripcion" type ="text" placeholder="rol"></ion-input >
+  <ion-input  *ngIf="false" formControlName="Id" name="Id" type ="text" placeholder="Id"></ion-input >
+
+<ion-button type="submit">
+  GUARDAR
+  
+</ion-button>
+
+
+
+ </form>
+</ion-content>

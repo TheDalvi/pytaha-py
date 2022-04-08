@@ -3,18 +3,19 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { PublicarService } from '../publicar/Service/publicar.service';
+import { RolService } from '../rol/Service/rol.service';
 
 @Component({
-  selector: 'app-publicar-list',
-  templateUrl: './publicar-list.page.html',
-  styleUrls: ['./publicar-list.page.scss'],
+  selector: 'app-rol-list',
+  templateUrl: './rol-list.page.html',
+  styleUrls: ['./rol-list.page.scss'],
 })
-export class PublicarListPage implements OnInit {
+export class RolListPage implements OnInit {
 
+  
   lista=[] ;
   public form : FormGroup;
-  constructor(public servie:PublicarService,private http : HttpClient,public formBuilder: FormBuilder,private activatedRoute: ActivatedRoute,private router: NavController) {
+  constructor(public servie:RolService,private http : HttpClient,public formBuilder: FormBuilder,private activatedRoute: ActivatedRoute,private router: NavController) {
    
 
 
@@ -24,13 +25,12 @@ export class PublicarListPage implements OnInit {
     this.form=this.formBuilder.group({
       Id: elemento.Id,
       Descripcion: elemento.Descripcion,
-      Observacion: elemento.Observacion,
      });
      
    }
 
   listar(){
-    this.http.get("http://localhost:3000/alquiler/getall").subscribe(x=>{
+    this.http.get("http://localhost:3000/rol/getall").subscribe(x=>{
       console.log(x);
       this.lista=(<any>x).result;
    
@@ -39,7 +39,7 @@ export class PublicarListPage implements OnInit {
 
   onClickE(id){
     console.log(id)
-    this.http.delete("http://localhost:3000/alquiler/remove/"+id).subscribe(x=>{
+    this.http.delete("http://localhost:3000/rol/remove/"+id).subscribe(x=>{
       console.log(x);
       this.lista=(<any>x).result;
       
@@ -65,11 +65,11 @@ export class PublicarListPage implements OnInit {
   }
 
   goto(){
-    this.router.navigateForward(["publicar/0"])
+    this.router.navigateForward(["rol/0"])
   
   }
   gotoE(item){
-    this.router.navigateForward(["publicar/"+item.Id])
+    this.router.navigateForward(["rol/"+item.Id])
     
   }
 }

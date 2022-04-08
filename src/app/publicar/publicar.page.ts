@@ -16,7 +16,7 @@ export class PublicarPage implements OnInit {
  
   @Input() frmAlquiler:FormGroup;
  
-  item="0";
+  item;
   permite=false;
   constructor( private http : HttpClient,public formBuilder: FormBuilder,private activate:ActivatedRoute,private router: NavController)
   {
@@ -50,17 +50,26 @@ editar(){
 
 }
 
-clickButton(){
+
+clickButtonGuardar(){
   console.log(this.item)
-  if(this.item=="0")
-  {
-    this.registrar();
-  }
-  else{
+
     this.editar();
    
     //router link volver al listado
-  }
+  
+  this.router.navigateForward(["publicar-list"])
+}
+
+clickButton(){
+  console.log(this.item)
+
+    this.registrar();
+
+    this.editar();
+   
+    //router link volver al listado
+  
   this.router.navigateForward(["publicar-list"])
 }
 CargarDatosDFoumulario(dato){
@@ -83,22 +92,23 @@ CargarDatosDFoumulario(dato){
 }
 
   ngOnInit() {
+
     this.item = this.activate.snapshot.paramMap.get('id');
     console.log(this.item)
 
       this.frmAlquiler=this.formBuilder.group({
-        Id: parseInt(this.item),
+       
         PersonaId: 1,
-        CategoriaId: 26,
-        CantidadHabitaciones: "",
-        Permite_Mascotas: this.permite,
-        Descripcion: "",
-        Ubicacion_GPS: "",
-        Observacion: "",
-        Direccion: "",
-        Precio: "",
-        Garantia: "",
-        Referencia: "",
+        CategoriaId: [0],
+        CantidadHabitaciones: [""],
+        Permite_Mascotas: [false],
+        Descripcion: [""],
+        Ubicacion_GPS: [""],
+        Observacion: [""],
+        Direccion:[""],
+        Precio: [""],
+        Garantia: [""],
+        Referencia: [""],
     
        });
       
@@ -106,6 +116,7 @@ CargarDatosDFoumulario(dato){
     if(this.item!="0"){
       this.getById();
     }
+  
   }
 
   checkboxClick(evento){

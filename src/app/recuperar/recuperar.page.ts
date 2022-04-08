@@ -21,9 +21,9 @@ export class RecuperarPage implements OnInit {
   async alertaBasica(){
     
     const miAlerta = await this.alerta.create({
-      header: 'Titulo de la Alerta',
-      message: 'Tres tristes tigres tragaban leche en un trigal',
-      buttons: ['Entendido']
+      header: 'Bienvenido Vidal',
+      message: 'Nos Alegra Tenerte devuelta!',
+      buttons: ['Explorar']
   
     });
     await miAlerta.present();

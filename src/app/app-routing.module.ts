@@ -43,6 +43,10 @@ const routes: Routes = [
     loadChildren: () => import('./publicar/publicar.module').then( m => m.PublicarPageModule)
   },
   {
+    path: 'publicar/:id',
+    loadChildren: () => import('./publicar/publicar.module').then( m => m.PublicarPageModule)
+  },
+  {
     path: 'categorias/:id',
     loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
   },
@@ -53,6 +57,18 @@ const routes: Routes = [
   {
     path: 'publicar-list',
     loadChildren: () => import('./publicar-list/publicar-list.module').then( m => m.PublicarListPageModule)
+  },
+  {
+    path: 'rol',
+    loadChildren: () => import('./rol/rol.module').then( m => m.RolPageModule)
+  },
+  {
+    path: 'rol/:id',
+    loadChildren: () => import('./rol/rol.module').then( m => m.RolPageModule)
+  },
+  {
+    path: 'rol-list',
+    loadChildren: () => import('./rol-list/rol-list.module').then( m => m.RolListPageModule)
   }
 
 ];
