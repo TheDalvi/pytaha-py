@@ -15,11 +15,11 @@
         {{item.Id}}
       </ion-label>
       <ion-button (click)="onClickE(item.Id)" >Delete</ion-button>
-      <ion-button  (click)="goto()" >Edit</ion-button>
+      <ion-button  (click)="gotoE(item)" >Edit</ion-button>
     </ion-item>
   </ion-list>
 
-  <ion-fab  vertical="center" horizontal="end" slot="fixed">
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button  >
       <ion-icon (click)="goto()"     name="add"></ion-icon>
     </ion-fab-button>

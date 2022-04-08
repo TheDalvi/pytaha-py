@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'categoria-list',
     loadChildren: () => import('./categorias/categoria-list/categoria-list.module').then( m => m.CategoriaListPageModule)
+  },
+  {
+    path: 'publicar-list',
+    loadChildren: () => import('./publicar-list/publicar-list.module').then( m => m.PublicarListPageModule)
   }
 
 ];

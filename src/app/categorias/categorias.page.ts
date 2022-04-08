@@ -3,6 +3,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { CategoriaService } from './categoria-list/Service/categoria.service';
 
 @Component({
   selector: 'app-categorias',
@@ -15,7 +16,7 @@ export class CategoriasPage implements OnInit {
  
   item="0";
   
-  constructor( private http : HttpClient,public formBuilder: FormBuilder,private activate:ActivatedRoute,private router: NavController)
+  constructor(public servie:CategoriaService, private http : HttpClient,public formBuilder: FormBuilder,private activate:ActivatedRoute,private router: NavController)
   {
 
 
@@ -35,6 +36,7 @@ export class CategoriasPage implements OnInit {
    console.log(this.frmCategoria.value);
  this.http.post('http://localhost:3000/categoria/add',this.frmCategoria.value).subscribe(respuesta=>{
    console.log("respuesta", respuesta);
+   this.servie.datoscambios.emit(1);
  })
 
 }
@@ -43,6 +45,7 @@ editar(){
   console.log(this.frmCategoria.value);
   this.http.put('http://localhost:3000/categoria/update',this.frmCategoria.value).subscribe(respuesta=>{
   console.log("respuesta", respuesta);
+   this.servie.datoscambios.emit(1);
 })
 
 }

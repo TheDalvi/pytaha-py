@@ -1,11 +1,27 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>PUBLICAR ALQUILER</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button (click)="onClickBack()"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Publicar alquileres</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
  
+
+  <form [formGroup]=" frmAlquiler" (ngSubmit)="registrar()">
+    <!-- <ion-input  formControlName="Descripcion" name="Descripcion" type ="text" placeholder="categoria"></ion-input >
+     <ion-input  *ngIf="false" formControlName="Id" name="Id" type ="text" placeholder="Id"></ion-input >
+   
+   <ion-button type="submit">
+     GUARDAR
+     
+   </ion-button> -->
+   
+  
+
+
    <!-- List of Text Items -->
    <ion-row>
     <ion-col size="1"></ion-col>
@@ -13,7 +29,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Cantidad de Habitaciones</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input  formControlName="CantidadHabitaciones"    class="text" type="numeric"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -22,9 +38,9 @@
     <ion-col size="1"></ion-col>
   
      <ion-col size="10" >
-      <ion-item class="colorlogin inputG">
-        <ion-label color="light" position="floating">Permiten Mascotas</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+      <ion-item class="colorlogin inputG"  >
+        <ion-label color="light" position="floating">Acepta Mascotas</ion-label>
+        <ion-checkbox (ionChange)="checkboxClick($event)" formControlName="Permite_Mascotas" class="text" value="false" ></ion-checkbox>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -35,7 +51,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Descripcion del lugar</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input  formControlName="Descripcion" class="text" type="text"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -46,7 +62,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Ubicación GPS</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input  formControlName="Ubicacion_GPS" class="text" type="text"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -57,7 +73,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Observación</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input formControlName="Observacion" class="text" type="text"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -67,9 +83,9 @@
   
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
-        <ion-label color="light" position="floating">Direción</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
-      </ion-item>
+        <ion-label color="light" position="floating">Dirección</ion-label>
+        <ion-input  formControlName="Direccion" class="text" type="text"  > </ion-input>   
+      </ion-item> 
      </ion-col>
     <ion-col size="1"></ion-col>
    </ion-row>
@@ -79,7 +95,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Precio</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input formControlName="Precio" class="text" type="numeric"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -90,7 +106,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating"> Garantia</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input formControlName="Garantia" class="text" type="numeric"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -102,7 +118,7 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Referencia</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input  formControlName="Referencia" class="text" type="text"  > </ion-input>  
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
@@ -114,24 +130,24 @@
      <ion-col size="10" >
       <ion-item class="colorlogin inputG">
         <ion-label color="light" position="floating">Categoria</ion-label>
-        <ion-input class="inputG" type="email"  > </ion-input>
+        <ion-input class="text" type="numeric"  > </ion-input>
       </ion-item>
      </ion-col>
     <ion-col size="1"></ion-col>
    </ion-row>
+   <ion-row>
    
-
+    <ion-col size="12">
+     <ion-button type="submit" expand="block" shape="round">
+       <ion-icon name="add-outline"></ion-icon>
+       CREA UN NUEVO ANUNCIO
+     </ion-button>
+    </ion-col>
+  </ion-row>
+  </form>
 
    <ion-grid>
-     <ion-row>
-   
-       <ion-col size="12">
-        <ion-button (click)="onClick()" expand="block" shape="round">
-          <ion-icon name="add-outline"></ion-icon>
-          CREA UN NUEVO ANUNCIO
-        </ion-button>
-       </ion-col>
-     </ion-row>
+
 
      <ion-row>
       <ion-col size="12">
@@ -152,6 +168,8 @@
       </ion-col>
     </ion-row>
 
+  
+
    </ion-grid>
    <ion-item>
     <ion-card>
@@ -171,5 +189,5 @@
 
 
 
-
+  <input type="checkbox">
 </ion-content>

@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { PublicarPageRoutingModule } from './publicar-routing.module';
 
 import { PublicarPage } from './publicar.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PublicarPageRoutingModule
+    PublicarPageRoutingModule, 
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   declarations: [PublicarPage]
 })
